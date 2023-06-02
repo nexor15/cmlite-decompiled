@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files (x86)\Steam\steamapps\common\Combat Master\BepInEx\plugins\CMLiteCheat_[unknowncheats.me]_.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E39B587D-8B58-4822-9488-3C00EBF375ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>CMLiteCheat</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>CMLiteCheat</RootNamespace>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Collections" />
+    <Reference Include="System.Linq" />
+    <Reference Include="System.Runtime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Queer.cs" />
+    <Compile Include="Utils\Methods.cs" />
+    <Compile Include="Utils\PlayFabInformation.cs" />
+    <Compile Include="Utils\Styles.cs" />
+    <Compile Include="Optimization\PlayerHandler.cs" />
+    <Compile Include="Module_Manager\Loader.cs" />
+    <Compile Include="Module_Manager\Modules\GUI.cs" />
+    <Compile Include="Module_Manager\Modules\Test.cs" />
+    <Compile Include="Module_Manager\Modules\Weapon\InfiniteAttachments.cs" />
+    <Compile Include="Module_Manager\Modules\Weapon\InstantScope.cs" />
+    <Compile Include="Module_Manager\Modules\Weapon\NoRecoil.cs" />
+    <Compile Include="Module_Manager\Modules\Weapon\NoSpread.cs" />
+    <Compile Include="Module_Manager\Modules\Weapon\NoSway.cs" />
+    <Compile Include="Module_Manager\Modules\Weapon\Unlimited_Ammo.cs" />
+    <Compile Include="Module_Manager\Modules\Visuals\Esp.cs" />
+    <Compile Include="Module_Manager\Modules\Visuals\RemovePlayfabId.cs" />
+    <Compile Include="Module_Manager\Modules\Movement\Fly.cs" />
+    <Compile Include="Module_Manager\Modules\Movement\JumpFly.cs" />
+    <Compile Include="Module_Manager\Modules\Movement\LowGravity.cs" />
+    <Compile Include="Module_Manager\Modules\Movement\QuickAndFastSlide.cs" />
+    <Compile Include="Module_Manager\Modules\Movement\SpeedHack.cs" />
+    <Compile Include="Module_Manager\Modules\Host_Only\DemiGodmode.cs" />
+    <Compile Include="Module_Manager\Modules\Host_Only\FreezeAll.cs" />
+    <Compile Include="Module_Manager\Modules\Host_Only\StartSinglePlayer.cs" />
+    <Compile Include="Module_Manager\Modules\Host_Only\TeleportAllBots.cs" />
+    <Compile Include="Module_Manager\Modules\Host_Only\XPLobby.cs" />
+    <Compile Include="Module_Manager\Modules\Combat\Aimbot.cs" />
+    <Compile Include="Module_Manager\Base\ModuleUtils.cs" />
+    <Compile Include="Module_Manager\Base\Settings\Setting.cs" />
+    <Compile Include="Module_Manager\Base\Settings\SliderSetting.cs" />
+    <Compile Include="Module_Manager\Base\Settings\TextBoxSetting.cs" />
+    <Compile Include="Module_Manager\Base\Settings\KeybindSetting.cs" />
+    <Compile Include="Module_Manager\Base\Settings\ToggleBoxSetting.cs" />
+    <Compile Include="Module_Manager\Base\Module\Module.cs" />
+    <Compile Include="Module_Manager\Base\Module\ModuleSettings.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Textures\Box.png" />
+    <EmbeddedResource Include="Textures\PrimaryButton.png" />
+    <EmbeddedResource Include="Textures\SecondaryButton.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
